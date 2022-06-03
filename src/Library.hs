@@ -78,7 +78,7 @@ excursionesDesestresantes :: Turista -> [Excursion] -> [Excursion]
 excursionesDesestresantes turista excursiones = filter (esDesestresante turista) excursiones
 
 esDesestresante :: Turista -> Excursion -> Bool
-esDesestresante turista = (<=3) . deltaExcursionSegun stress turista
+esDesestresante turista = (>=3) . deltaExcursionSegun stress turista
 
 ------------------------------------------------------ Punto 3 ------------------------------------------------------
 
